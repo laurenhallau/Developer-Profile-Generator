@@ -22,30 +22,34 @@ const questions = [
 
 // Function is generating the user response from the prompt questions
 function generate() {
-    inquirer.prompt(questions).then(function(response){
+    inquirer
+    .prompt(questions)
+    .then(function(response){
         console.log(response); 
 
         const queryURL = `https://api.github.com/users/${response.username}`;
         //first axios call
         // console.log(queryURL);
-        axios.get(queryURL).then(function(answer) {
+        axios
+        .get(queryURL)
+        .then(function(answer) {
             console.log(answer.data);
+            console.log(answer.data.name);
+            console.log(answer.data.bio);
+
+            fs.writeFile("index.html", generateHTML, function (err) {
+                if (err) {
+                    throw err;
+                } else {
+                    console.log("success!");
+                }
+            });
         })
         .catch(function (error) {
             console.log(error);
-        })
-        // .then(function (generateHTML) {
-        //     fs.writeFile("index.html", generateHTML, function (err) {
-        //         if (err) {
-        //             throw err;
-        //         } else {
-        //             console.log("success!");
-        //         }
-        //     })
-        // })
-        
-    });
-    
-}
+        })  
+    }); 
+};
+
 generate();
 

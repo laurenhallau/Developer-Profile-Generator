@@ -1,18 +1,18 @@
 const colors = {
-  red : {
-    background : "#ff3333",
+  red:  {
+    background: "#ff3333",
   },
-  green : {
-    background : "#33ff33",
+  green:  {
+    background: "#33ff33",
   },
-  blue : {
-    background : "#3366ff",
+  blue:  {
+    background: "#3366ff",
   },
-  purple : {
-    background : "#9933ff",
-  }, 
-  yellow : {
-    background : "#ffff33",
+  purple:  {
+    background: "#9933ff",
+  },
+  yellow:  {
+    background: "#ffff33",
   },
 }
 
@@ -27,11 +27,7 @@ function generateHTML(data) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Link to GoogleFonts-->
     <link href="https://fonts.googleapis.com/css?family=GFS+Didot&display=swap" rel="stylesheet">
-    <style>
-      .card {
-        background-color: ${colors[data.color].background};
-      }
-    </style>
+    
 </head>
 <body>
     <script>
@@ -41,17 +37,17 @@ function generateHTML(data) {
     
     <!--Link to Jumbotron- includes name, bio, links-->
     <div class="jumbotron">
-        <h1 class="display-4 text-center">Hello! My name is ${data.name}</h1>
+        <h1 class="display-4 text-center">Hello! My name is ${answer.data.name}</h1>
         <div class="d-flex justify-content-center">
-          <img src="${data.img}" alt="profile picture">
+          <img src="${data.avatar_url}" alt="profile picture">
         </div>
         <p class="lead text-center"></p>
         <hr class="my-4">
         <p class="text-center">${data.bio}</p>
         <div class="d-flex justify-content-center">
-          <a class="btn btn-secondary btn-md" href="https://www.google.com/maps/@?api=1&map_action=map&query=${data.location}" role="button" target="_blank">${location}</a>
-          <a class="btn btn-secondary btn-md" href="${github}" role="button" target="_blank">GitHub</a>
-          <a class="btn btn-secondary btn-md" href="https://${blog}" role="button" target="_blank">Blog</a>
+          <a class="btn btn-secondary btn-md" href="https://www.google.com/maps/@?api=1&map_action=map&query=${data.location}" role="button" target="_blank">${data.location}</a>
+          <a class="btn btn-secondary btn-md" href="${data.html_url}" role="button" target="_blank">GitHub</a>
+          <a class="btn btn-secondary btn-md" href="${data.blog}" role="button" target="_blank">Blog</a>
         </div>
       </div>
 
@@ -62,7 +58,7 @@ function generateHTML(data) {
             <div class="card text-center" style="width: 18rem; margin-bottom: 5%;">
               <div class="card-body">
                 <h5 class="card-title">Public Repositories</h5>
-                <p class="card-text">${data.repos}</p>
+                <p class="card-text">${data.public_repos}</p>
               </div>
             </div>
           </div>
@@ -78,7 +74,7 @@ function generateHTML(data) {
             <div class="card text-center" style="width: 18rem; margin-bottom: 5%;">
               <div class="card-body">
                 <h5 class="card-title">GitHub Stars</h5>
-                <p class="card-text">${data.stars}</p>
+                <p class="card-text">${data.public_gists}</p>
               </div>
             </div>
           </div>
@@ -99,7 +95,7 @@ function generateHTML(data) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
 
 </body>
-</html>`
+</html>`;
 }
 
 module.exports = generateHTML;
