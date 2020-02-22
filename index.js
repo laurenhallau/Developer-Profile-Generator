@@ -37,7 +37,7 @@ function generate() {
             console.log(answer.data.name);
             console.log(answer.data.bio);
 
-            fs.writeFile("index.html", generateHTML, function (err) {
+            fs.writeFile("index.html", generateHTML(answer.data), function (err) {
                 if (err) {
                     throw err;
                 } else {

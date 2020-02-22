@@ -1,5 +1,4 @@
-function generateHTML(data) { 
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,17 +18,17 @@ function generateHTML(data) {
     
     <!--Link to Jumbotron- includes name, bio, links-->
     <div class="jumbotron">
-        <h1 class="display-4 text-center">Hello! My name is ${answer.data.name}</h1>
+        <h1 class="display-4 text-center">Hello! My name is Lauren Hallau</h1>
         <div class="d-flex justify-content-center">
-          <img src="${data.avatar_url}" alt="profile picture">
+          <img src="https://avatars0.githubusercontent.com/u/57729504?v=4" alt="profile picture">
         </div>
         <p class="lead text-center"></p>
         <hr class="my-4">
-        <p class="text-center">${data.bio}</p>
+        <p class="text-center">Educator. Yogi. Aspiring Coder. Currently enrolled in Full-Stack Program at University of Minnesota</p>
         <div class="d-flex justify-content-center">
-          <a class="btn btn-secondary btn-md" href="https://www.google.com/maps/@?api=1&map_action=map&query=${data.location}" role="button" target="_blank">${data.location}</a>
-          <a class="btn btn-secondary btn-md" href="${data.html_url}" role="button" target="_blank">GitHub</a>
-          <a class="btn btn-secondary btn-md" href="${data.blog}" role="button" target="_blank">Blog</a>
+          <a class="btn btn-secondary btn-md" href="https://www.google.com/maps/@?api=1&map_action=map&query=Minneapolis, MN" role="button" target="_blank">Minneapolis, MN</a>
+          <a class="btn btn-secondary btn-md" href="https://github.com/laurenhallau" role="button" target="_blank">GitHub</a>
+          <a class="btn btn-secondary btn-md" href="" role="button" target="_blank">Blog</a>
         </div>
       </div>
 
@@ -40,7 +39,7 @@ function generateHTML(data) {
             <div class="card text-center" style="width: 18rem; margin-bottom: 5%;">
               <div class="card-body">
                 <h5 class="card-title">Public Repositories</h5>
-                <p class="card-text">${data.public_repos}</p>
+                <p class="card-text">12</p>
               </div>
             </div>
           </div>
@@ -48,7 +47,7 @@ function generateHTML(data) {
             <div class="card text-center" style="width: 18rem; margin-bottom: 5%;">
               <div class="card-body">
                 <h5 class="card-title">Followers</h5>
-                <p class="card-text">${data.followers}</p>
+                <p class="card-text">6</p>
               </div>
             </div>
           </div>
@@ -56,7 +55,7 @@ function generateHTML(data) {
             <div class="card text-center" style="width: 18rem; margin-bottom: 5%;">
               <div class="card-body">
                 <h5 class="card-title">GitHub Stars</h5>
-                <p class="card-text">${data.public_gists}</p>
+                <p class="card-text">0</p>
               </div>
             </div>
           </div>
@@ -64,7 +63,7 @@ function generateHTML(data) {
             <div class="card text-center" style="width: 18rem; margin-bottom: 5%;">
               <div class="card-body">
                 <h5 class="card-title">Following</h5>
-                <p class="card-text">${data.following}</p>
+                <p class="card-text">7</p>
               </div>
             </div>
           </div>
@@ -77,5 +76,4 @@ function generateHTML(data) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
 
 </body>
-</html>`;
-}
+</html>

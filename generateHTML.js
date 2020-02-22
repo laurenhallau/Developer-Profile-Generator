@@ -37,7 +37,7 @@ function generateHTML(data) {
     
     <!--Link to Jumbotron- includes name, bio, links-->
     <div class="jumbotron">
-        <h1 class="display-4 text-center">Hello! My name is ${answer.data.name}</h1>
+        <h1 class="display-4 text-center">Hello! My name is ${data.name}</h1>
         <div class="d-flex justify-content-center">
           <img src="${data.avatar_url}" alt="profile picture">
         </div>
