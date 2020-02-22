@@ -33,6 +33,9 @@ function generateHTML(data) {
     .card {
       background: ${colors[data.color].background};
     }
+    .jumbotron {
+      background: ${colors[data.color].background};
+    }
     </style>
 </head>
 <body>
