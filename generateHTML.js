@@ -36,14 +36,12 @@ function generateHTML(data) {
     .jumbotron {
       background: ${colors[data.color].background};
     }
+    body {
+      font-family: 'GFS Didot', serif;
+    }
     </style>
 </head>
 <body>
-    <script>
-        body 
-        {font-family; 'GFS Didot', 
-        serif;}</script>
-    
     <!--Link to Jumbotron- includes name, bio, links-->
     <div class="jumbotron">
         <h1 class="display-4 text-center">Hello! My name is ${data.name}</h1>
