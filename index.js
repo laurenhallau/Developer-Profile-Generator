@@ -46,8 +46,8 @@ function generate() {
                     throw err;
                 } else {
                     console.log("success!");
-                   
-                    htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toFile("resume.pdf"));
+                   //currently an error when creating the PDF
+                    htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toFile("profile.pdf"));
                     htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toBase64());
                     htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toBuffer());
                     console.log("PDF Created!");
