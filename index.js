@@ -26,6 +26,7 @@ function generate() {
     .prompt(questions)
     .then(function(response){
         console.log(response); 
+        favCol = response.color;
 
         const queryURL = `https://api.github.com/users/${response.username}`;
         //first axios call
@@ -34,9 +35,9 @@ function generate() {
         .get(queryURL)
         .then(function(answer) {
             console.log(answer.data);
-            console.log(answer.data.name);
-            console.log(answer.data.bio);
+            answer.data.color = favCol;
 
+            //writing the html file
             fs.writeFile("index.html", generateHTML(answer.data), function (err) {
                 if (err) {
                     throw err;

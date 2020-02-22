@@ -28,6 +28,12 @@ function generateHTML(data) {
     <!--Link to GoogleFonts-->
     <link href="https://fonts.googleapis.com/css?family=GFS+Didot&display=swap" rel="stylesheet">
     
+    
+    <style>
+    .card {
+      background: ${colors[data.color].background};
+    }
+    </style>
 </head>
 <body>
     <script>
