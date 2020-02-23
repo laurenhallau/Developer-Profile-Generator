@@ -8,4 +8,4 @@ From the command line in the terminal, user will enter their GitHub user name an
 ![Screenshot](screenshot.png)
 
 ### Live Demo
-<img src="https://media.giphy.com/media/lp1D2OfAw70MO5yduF/giphy.gif" width="40" height="40" />
+<img src="https://media.giphy.com/media/lp1D2OfAw70MO5yduF/giphy.gif" width="200" height="200" />
