@@ -8,6 +8,4 @@ From the command line in the terminal, user will enter their GitHub user name an
 ![Screenshot](screenshot.png)
 
 ### Live Demo
-![LiveDemo](http//example.io/link-to-image)
-wrapped in a link
-[link text](https://youtu.be/QOXrGxbZUSI "link title")
+<iframe src="https://giphy.com/embed/lp1D2OfAw70MO5yduF" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/livedemo-lp1D2OfAw70MO5yduF">via GIPHY</a></p>
