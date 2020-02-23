@@ -5,7 +5,7 @@ Homework #9:
 This weather dashboard will return the current conditions, as well as the five-day forecast, based on user input.
 
 ### Screenshot
-![Screenshot](.assets/screenshot.png)
+![Screenshot](screenshot.png)
 
 ### Gif
-![Watch the video](.assets/Screenrecoring.mov)
+![Watch the video](Screenrecoring.mov)
