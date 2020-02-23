@@ -5,8 +5,8 @@ const util = require("util");
 const axios = require("axios");
 const generateHTML = require("./generateHTML"); 
 // const pdf = require('html-pdf');
-const options = { format: "Letter", charset: "utf-8" };
-const htmlPdf = require("html-pdf-chrome");
+// const options = { format: "Letter", charset: "utf-8" };
+// const htmlPdf = require("html-pdf-chrome");
 
 //Questions to prompt user:
 const questions = [
@@ -46,11 +46,11 @@ function generate() {
                     throw err;
                 } else {
                     console.log("success!");
-                   //currently an error when creating the PDF
-                    htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toFile("profile.pdf"));
-                    htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toBase64());
-                    htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toBuffer());
-                    console.log("PDF Created!");
+                //    currently an error when creating the PDF
+                    // htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toFile("profile.pdf"));
+                    // htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toBase64());
+                    // htmlPdf.create(generateHTML(answer.data), options).then(pdf => pdf.toBuffer());
+                    // console.log("PDF Created!");
                 }
             });
         })
